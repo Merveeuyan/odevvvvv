@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>modal form</title>
+  <link rel="stylesheet"  href="style.css"/>
+</head>
+<body>
+  <button id="openModal">Başvuru Formunu Aç</button>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span id="closeModal" class="close">&times;</span>
+      <h2>Başvuru Formu</h2>
+      <form id="applicationForm">
+        <label for="name">Adınız:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="surname">Soyadınız:</label>
+        <input type="text" id="surname" name="surname" required>
+
+        <label for="phone">Telefon Numaranız:</label>
+        <input type="tel" id="phone" name="phone" placeholder="555-123-4567" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+        <label for="gender">Cinsiyet:</label>
+        <select id="gender" name="gender" required>
+          <option value="Erkek">Erkek</option>
+          <option value="Kadın">Kadın</option>
+          <option value="Diğer">Diğer</option>
+        </select>
+
+        <label for="dob">Doğum Tarihi:</label>
+        <input type="date" id="dob" name="dob" required>
+
+        <label for="address">Adres:</label>
+        <input type="text" id="address" name="address" required>
+
+        <label for="file">Dosya Yükleme:</label>
+        <input type="file" id="file" name="file" accept=".jpg, .png, .pdf" required>
+
+        <button type="submit">Gönder</button>
+      </form>
+    </div>
+  </div>
+ 
+   <script src="style.js"> </script>
+
+</body>
+</html>
